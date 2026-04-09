@@ -1,0 +1,36 @@
+
+.nav-link {
+    position: relative;
+    color: #6b7280; 
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #2563eb; 
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #2563eb;
+}
+
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #2563eb;
+    font-weight: 700;
+}
